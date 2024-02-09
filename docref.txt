@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=50.62.57.188\\SERVER2017,5500;Initial Catalog=Moneytor_v10_mgd2;User ID=ibs;Password=vaug;" Microsoft.EntityFrameworkCore.SqlServer -ContextDir ContextD -Context iMoneytorContext -OutputDir iMoneytor

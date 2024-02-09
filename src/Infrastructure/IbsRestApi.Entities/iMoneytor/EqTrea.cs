@@ -1,0 +1,73 @@
+﻿namespace IbsRestApi.Entities.iMoneytor;
+
+public partial class EqTrea
+{
+    public int UniqueId { get; set; }
+    public int? ShareId { get; set; }
+    public string? MarketType { get; set; }
+    public string? IssueId { get; set; }
+    public byte? Cscstransaction { get; set; }
+    public string? Cscsid { get; set; }
+    public string? InvestorAccountNo { get; set; }
+    public int? DepositId { get; set; }
+    public int? RightId { get; set; }
+    public string? Narration { get; set; }
+    public DateTime? IssueDate { get; set; }
+    public DateTime? LodgementDate { get; set; }
+    public decimal? UnitCost { get; set; }
+    public string? CrDr { get; set; }
+    public decimal? QtyUnit { get; set; }
+    public decimal? Cscsqty { get; set; }
+    public decimal? CertificateQty { get; set; }
+    public decimal? Consideration { get; set; }
+    public string? BrokerId { get; set; }
+    public string? TransferNo { get; set; }
+    public string? ContractNoteNo { get; set; }
+    public decimal? StampDuty { get; set; }
+    public decimal? Commission { get; set; }
+    public decimal? Vat { get; set; }
+    public decimal? SecFees { get; set; }
+    public decimal? NseCscsfees { get; set; }
+    public decimal? OtherFees { get; set; }
+    public decimal? Premuim { get; set; }
+    public decimal? Discount { get; set; }
+    public decimal? TransactionCost { get; set; }
+    public decimal? TotalCost { get; set; }
+    public int? BankId { get; set; }
+    public string? ChequeNo { get; set; }
+    public string? Comments { get; set; }
+    public decimal? QtySold { get; set; }
+    public decimal? CostOfSales { get; set; }
+    public decimal? MarketPrice { get; set; }
+    public decimal? MarketValue { get; set; }
+    public decimal? PaidUpAmount { get; set; }
+    public int? AdjustId { get; set; }
+    public int? ReversalId { get; set; }
+    public string? Status { get; set; }
+    public int? IdTransactionProcess { get; set; }
+    public string? VoucherNo { get; set; }
+    public DateTime? LastValuationDate { get; set; }
+    public decimal? NetAssetValue { get; set; }
+    public decimal? LastMarketPrice { get; set; }
+    public string? TransType { get; set; }
+    public int? DividendId { get; set; }
+    public string? SalesType { get; set; }
+    public DateTime? SettlementDate { get; set; }
+    public int? IdShareMandateDetail { get; set; }
+    public decimal? ComissionRate { get; set; }
+    public decimal? BookCost { get; set; }
+    public int? AnnualId { get; set; }
+    public bool? CalculationOverride { get; set; }
+    public DateTime? GlpostDate { get; set; }
+    public string? GlPostPeriod { get; set; }
+    public int? IdSellTriger { get; set; }
+    public int? IdEquityMandateExecution { get; set; }
+    public int? IdComplianceOverrideDetails { get; set; }
+    public string? AdjRemarks { get; set; }
+    
+    public decimal? UnRealisedGainLoss { get; set; }
+    public int? AnnualIdSave { get; set; }
+    public int? Post2Gl { get; set; }
+    public string? CapturedBy { get; set; }
+    public decimal? ExRate { get; set; }
+}

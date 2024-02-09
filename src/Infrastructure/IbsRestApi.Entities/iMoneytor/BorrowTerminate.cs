@@ -1,0 +1,85 @@
+﻿namespace IbsRestApi.Entities.iMoneytor;
+
+public partial class BorrowTerminate
+{
+    public int IdBorrowTerminate { get; set; }
+    public int? IdBorrowMaster { get; set; }
+    public string? TerminationReason { get; set; }
+    public DateTime? TerminationDate { get; set; }
+    public string? TerminationType { get; set; }
+    public string? InterestMode { get; set; }
+    public decimal? InterestRate { get; set; }
+    public bool? InterestPaidUpfront { get; set; }
+    public byte? CompoundIntType { get; set; }
+    public int? NoOfMonths { get; set; }
+    public string? RePayGap { get; set; }
+    public int? MoratoriumDays { get; set; }
+    public decimal? MoratoriumInterest { get; set; }
+    public bool? CapitaliseMoratorium { get; set; }
+    public decimal? RentalAmount { get; set; }
+    public decimal? Amount2Withdraw { get; set; }
+    public decimal? NewFaceValue { get; set; }
+    public DateTime? NewEffectiveDate { get; set; }
+    public DateTime? FirstPaymentDueDate { get; set; }
+    public DateTime? MaturityDate { get; set; }
+    public bool? PostDatedCheques { get; set; }
+    public decimal? PurchaseOption { get; set; }
+    public decimal? ResidualRate { get; set; }
+    public decimal? ResidualValue { get; set; }
+    public int? NoOfDays { get; set; }
+    public decimal? Principal { get; set; }
+    public decimal? InterestEarned { get; set; }
+    public decimal? BorrowAccountBalance { get; set; }
+    public decimal? IntCharges { get; set; }
+    public decimal? Penalty2Duduct { get; set; }
+    public decimal? Adjustment { get; set; }
+    public decimal? Amount2Pay { get; set; }
+    public decimal? RefundAmount { get; set; }
+    public string? IdBranch { get; set; }
+    public string? Status { get; set; }
+    public decimal? UnitCost { get; set; }
+    public int? QtyUnit { get; set; }
+    public decimal? NorminalValue { get; set; }
+    public string? IssueType { get; set; }
+    public string? PrnPayGap { get; set; }
+    public string? IntPayGap { get; set; }
+    public decimal? MarketValue { get; set; }
+    public string? VoucherNo { get; set; }
+    public DateTime? SettlementDate { get; set; }
+    public decimal? Amount2Add { get; set; }
+    public decimal? WithHoldTaxAmount { get; set; }
+    public DateTime? GlpostDate { get; set; }
+    public string? GlPostPeriod { get; set; }
+    public DateTime? LastPostDate { get; set; }
+    public decimal? Accrual2Reverse { get; set; }
+    public int? Days4IntCharges { get; set; }
+    public bool? Reversed { get; set; }
+    public string? Comments { get; set; }
+    public decimal? PostedWithTaxBf { get; set; }
+    public bool? CapitaliseInterest { get; set; }
+    public decimal? EffectiveYield { get; set; }
+    public decimal? DiscountRate { get; set; }
+    public decimal? ProfitOrLoss { get; set; }
+    public DateTime? BookingDate { get; set; }
+    public decimal? Fv2withDraw { get; set; }
+    public decimal? NewEffectiveYield { get; set; }
+    public long? Utid { get; set; }
+    public string? CapturedBy { get; set; }
+    public DateTime? CapturedDate { get; set; }
+    public string? ApprovedBy { get; set; }
+    public DateTime? ApprovedDate { get; set; }
+    public int? SoldToCustomerId { get; set; }
+    public string? RefNo { get; set; }
+    public int? IdSettlementModes { get; set; }
+    public string? ContactPerson { get; set; }
+    public decimal? RounUpDiff { get; set; }
+    public decimal? ReverseTransFees { get; set; }
+    public decimal? DeductStampDuty { get; set; }
+    public decimal? Int2Maturity { get; set; }
+    public decimal? UnPostedTransFees { get; set; }
+    public int? IdSignature { get; set; }
+    public bool? PenaltyOnNetInterest { get; set; }
+    public decimal? RefundWitholdingTax { get; set; }
+
+    public virtual BorrowMaster? IdBorrowMasterNavigation { get; set; }
+}

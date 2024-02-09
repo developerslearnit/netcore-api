@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Common\IbsRestApi.Common\IbsRestApi.Common.csproj" />
+		<ProjectReference Include="..\..\Infrastructure\IbsRestApi.Persistence\IbsRestApi.Persistence.csproj" />
+		<ProjectReference Include="..\IbsRestApi.Application\IbsRestApi.Application.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,215 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<UserSecretsId>7b326eb9-cd5f-4c08-aae5-1bcb7b4f1fb4</UserSecretsId>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Areas\Setups\Data\**" />
+		<Content Remove="Areas\Setups\Data\**" />
+		<EmbeddedResource Remove="Areas\Setups\Data\**" />
+		<None Remove="Areas\Setups\Data\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="wwwroot\avatars\carbon.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="MailTemplates\cowry\emailconfirm.html" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="MailTemplates\cowry\emailconfirm.html">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Hangfire" Version="1.7.34" />
+		<PackageReference Include="Hangfire.Core" Version="1.7.34" />
+		<PackageReference Include="Hangfire.SqlServer" Version="1.7.34" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+		<PackageReference Include="Paystack.Net.SDK" Version="1.3.8.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.6" />
+		<PackageReference Include="System.Net.Http.Json" Version="7.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\IbsRestApi.CustomAuth\IbsRestApi.CustomAuth.csproj" />
+		<ProjectReference Include="..\..\Common\IbsRestApi.Common\IbsRestApi.Common.csproj" />
+		<ProjectReference Include="..\..\Common\IbsRestApi.Communications\IbsRestApi.Communications.csproj" />
+		<ProjectReference Include="..\..\Core\IbsRestApi.Application\IbsRestApi.Application.csproj" />
+		<ProjectReference Include="..\..\Core\IbsRestApi.Domain\IbsRestApi.Domain.csproj" />
+		<ProjectReference Include="..\..\Infrastructure\IbsRestApi.Entities\IbsRestApi.Entities.csproj" />
+		<ProjectReference Include="..\..\Infrastructure\IbsRestApi.Persistence\IbsRestApi.Persistence.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="MailTemplates\anchoria\base64img.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\forgotpassword.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\NewAccountEmail.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\NewSubscriptionNoticeInhouse.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\otpemail.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\Receipt.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\RedemptionNoticeCustomer.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\RedemptionNoticeInhouse.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\anchoria\SuccessfulResetPassword.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\APIRegNewAccountEmail.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\forgotpassword.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\NewAccountEmail.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\NewSubscriptionNoticeInhouse.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\otpemail.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\PaymentNotification.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\Receipt.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\RedemptionNoticeCustomer.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\RedemptionNoticeInhouse.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\CitiTrust\SuccessfulResetPassword.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\cowry\forgotpassword_mobile.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\cowry\NewAccountEmail.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\cowry\NewAccountNotification.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\cowry\SuccessfulResetPassword.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\forgotpassword.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\forgotpassword_mobile.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\Receipt.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\RedemptionNoticeInhouse.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\forgotpassword.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\NewAccountEmail.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\NewAccountNotification.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\NewSubscriptionNoticeInhouse.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\otpemail.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\PaymentNotification.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\Receipt.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\RedemptionNoticeCustomer.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\RedemptionNoticeInhouse.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\simplex\SuccessfulResetPassword.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\EmailConfirmation.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\forgotpassword.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\NewAccountEmail.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\NewAccountNotification.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\NewSubscriptionNoticeInhouse.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\otpemail.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\PaymentNotification.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\Receipt.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\RedemptionNoticeCustomer.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\RedemptionNoticeInhouse.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="MailTemplates\utica\SuccessfulResetPassword.html">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Pictures\carbon.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\avatars\carbon.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>

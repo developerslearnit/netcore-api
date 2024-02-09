@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Confirmation Token</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0," />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+
+    <style type="text/css">
+
+
+        html {
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+        }
+
+        img {
+            display: block !important;
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+                line-height: 100%;
+            }
+
+        .images {
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .MsoNormal {
+            font-family: Open Sans,Arial, Helvetica Neue, Helvetica, sans-serif !important;
+        }
+
+        p {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .button td,
+        .button a {
+            font-family: Open Sans, Arial, Helvetica Neue, Helvetica, sans-serif !important;
+        }
+
+            .button a:hover {
+                text-decoration: none !important;
+            }
+
+        /* MEDIA QUIRES */
+
+
+        @media only screen and (max-width:640px) {
+            body {
+                width: auto !important;
+            }
+
+            table[class=display-width] {
+                width: 100% !important;
+            }
+
+            table[class=nulltable] {
+                display: none !important;
+            }
+
+            .null {
+                display: none !important;
+            }
+
+            .hide-height {
+                height: 0 !important;
+            }
+
+            .common-height {
+                height: 40px !important;
+            }
+
+            .nomobile {
+                display: none !important;
+            }
+
+            .hide {
+                display: none !important;
+            }
+
+            .remove-bar {
+                display: none !important;
+            }
+
+            .phone {
+                width: 55% !important;
+            }
+
+            .follow {
+                width: 15px !important;
+            }
+        }
+
+        @media only screen and (max-width:480px) {
+            table[class=display-width] table {
+                width: 100% !important;
+            }
+
+            table[class=display-width] .button-width .button {
+                width: auto !important;
+            }
+
+            .menu {
+                font-size: 12px !important;
+            }
+
+            table[class=display-width] .phone {
+                width: 55% !important;
+            }
+        }
+
+        @media only screen and (max-width:350px) {
+            table[class=display-width] .phone {
+                width: auto !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body style="background:#333333">
+
+    <!-- MENU STARTS -->
+    <div style="height:60px;width:100%"></div>
+    <table align="center" bgcolor="#333333" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <table align="center" bgcolor="#eb0028" border="0" cellpadding="0" cellspacing="0" class="display-width" width="680">
+                        <tr>
+                            <td align="center" style="padding:0 30px;">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="600">
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="100%">
+                                                <tr>
+                                                    <td>
+                                                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="display-width" width="25%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                            <tr>
+                                                                <td align="center" valign="middle">
+                                                                    <a href="#" style="color:#444444;text-decoration:none;">
+                                                                        <img src="data:image/jpeg;base64,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" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table align="left" border="0" cellpadding="0" cellspacing="0" width="1" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="line-height:20px;" height="20" width="1"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="15"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- MENU ENDS -->
+    <!-- RESET PASSWORD STARTS -->
+
+    <table align="center" bgcolor="#333333" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="display-width" width="680">
+                    <tr>
+                        <td align="center">
+
+                            <div style="margin:auto;">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="100%">
+                                    <tr>
+                                        <td align="center" style="padding:0 30px;">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="600">
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="40"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" class="MsoNormal" style="color:#000;font-family:'Segoe UI',sans-serif,Arial,Helvetica,Lato;font-size:18px;font-weight:600;letter-spacing:1px;line-height:18px;text-transform:capitalize;">
+                                                            Verify your email
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left">
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="display-width" width="100%">
+                                                                <tr>
+                                                                    <td align="left" class="MsoNormal" style="color:#000;font-family:'Segoe UI',sans-serif,Arial,Helvetica,Lato;font-size:15px;line-height:24px;">
+                                                                       Thank you for registering with Cowry Assets.
+                                                            To begin working with your onboarding, please confirm your email address by providing the OTP below:
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="30" style="border-bottom:1px dashed #dddddd;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="10"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left">
+
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="display-width" width="100%">
+                                                                <tr>
+                                                                    <td align="left" class="MsoNormal" style="font-weight:700; color:#000;font-family:'Segoe UI',sans-serif,Arial,Helvetica,Lato;font-size:20px;line-height:24px;">
+                                                                        {otp}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="10" style="border-bottom:1px dashed #dddddd;"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"></td>
+                                                                </tr>
+                                                                
+                                                            </table>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="10"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td height="40"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--[if gte mso 9]> </v:textbox> </v:rect> <![endif]-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- RESET PASSWORD ENDS -->
+    <!-- FOOTER STARTS -->
+
+    <table align="center" bgcolor="#333333" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="100%">
+                    <tr>
+                        <td align="center">
+                            <table align="center" bgcolor="#cc6600" border="0" cellpadding="0" cellspacing="0" class="display-width" width="680">
+                                <tr>
+                                    <td align="center" style="padding:0 30px;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="600">
+                                            <tr>
+                                                <td align="center">
+                                                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="100%">
+                                                        <tr>
+                                                            <td height="20"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+
+                                                                <!-- TABLE LEFT -->
+
+                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="display-width" width="43%" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;width:auto;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="display-width" width="100%" style="width:auto !important;">
+                                                                                    <tr>
+                                                                                        <td align="left" class="MsoNormal" style="color:#ffffff;font-family:'Segoe UI',sans-serif,Arial,Helvetica,Lato;font-size:14px;letter-spacing:1px;line-height:24px;">
+                                                                                            Copyright  &copy; 2022
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" width="1" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="line-height:20px;" height="20" width="1"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                                <!-- TABLE RIGHT -->
+
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="20"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- FOOTER ENDS -->
+
+</body>
+</html>
